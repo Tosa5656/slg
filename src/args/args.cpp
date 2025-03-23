@@ -26,3 +26,17 @@ std::vector<std::string> ArgsManager::getArgs()
 {
     return m_Args;
 }
+
+int ArgsManager::getArgsCount()
+{
+    return m_ArgsCount;
+}
+
+bool ArgsManager::checkFlag(std::string flag)
+{
+    for(int i = 0; i < m_ArgsCount; i++)
+    {
+        if(m_Args[i] == flag) return true;
+    }
+    return false;
+}
